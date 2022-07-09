@@ -30,6 +30,12 @@ img {
     padding: 0 30px;
 }
 
+.container-2 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
 .navbar {
     background-color: #1F2937;
     height: 75px;
@@ -94,4 +100,47 @@ img {
     font-weight: bold;
     color: white;
     border-radius: 10px;
+}
+
+.boxes {
+    height: 550px;
+}
+
+.boxes .container-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.boxes .box-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boxes h3 {
+    margin: 53px auto;
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+}
+
+.boxes img {
+    max-width: 180px;
+}
+
+.boxes p {
+    max-width: 175px;
+    color: #1F2937;
+    font-weight: 400;
+    opacity: .7;
+    font-size: 18px;
+    margin-top: 5px;
 }
