@@ -315,3 +315,18 @@ img {
         gap: 115px;
     }
 }
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: #29384d;
+}
