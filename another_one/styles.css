@@ -150,6 +150,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* flex-wrap: wrap; */
 }
 
 .box {
@@ -281,4 +282,32 @@ img {
     color: white;
     font-size: 17px;
     opacity: .9;
+}
+
+/* Footer ends */
+
+/*  I don't know anything about this crap
+    just tried to repeat as I saw in a tutorial (it worked)  */
+
+@media(max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+
+    .header .contents {
+        margin-top: 20px;
+    }
+
+    .header img {
+        max-width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .boxes .box-container {
+        flex-wrap: wrap;
+    }
+    
+    .boxes {
+        height: 750px;
+    }
 }
