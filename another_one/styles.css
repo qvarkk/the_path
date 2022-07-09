@@ -310,4 +310,8 @@ img {
     .boxes {
         height: 750px;
     }
+
+    .sign-up .container-3 {
+        gap: 115px;
+    }
 }
