@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
 
+/* Global styles start */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,6 +25,10 @@ img {
     max-width: 100%;
 }
 
+/* Global styles end
+
+   Containers styles start */
+
 .container {
     max-width: 1250px;
     margin: 0 auto;
@@ -35,6 +40,16 @@ img {
     margin: 0 auto;
     padding: 0 30px;
 }
+
+.container-3 {
+    max-width: 1275px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Container styles end
+
+   Navbar styles start */
 
 .navbar {
     background-color: #1F2937;
@@ -58,7 +73,16 @@ img {
     color: #F9FAF8;
     text-decoration: none;
     opacity: .7;
+    transition: opacity .2s;
 }
+
+.navbar a:hover {
+    opacity: .5;
+}
+
+/* Navbar styles end
+
+   Header styles start */
 
 .header {
     background-color: #1F2937;
@@ -100,7 +124,16 @@ img {
     font-weight: bold;
     color: white;
     border-radius: 10px;
+    transition: opacity .2s;
 }
+
+.header button:hover {
+    opacity: .7;
+}
+
+/* Header styles end 
+
+   Box section styles start  */
 
 .boxes {
     height: 550px;
@@ -143,4 +176,109 @@ img {
     opacity: .7;
     font-size: 18px;
     margin-top: 5px;
+}
+
+/* Box section styles end
+
+   Quote section styles start */
+
+.quote {
+    height: 450px;
+    background-color: #E5E7EB;
+    color: #1F2937
+}
+
+.quote .container-2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote h4 {
+    max-width: 800px;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.quote h5 {
+    margin-right: 75px;;
+    align-self: end;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Quote section styles end
+
+   Sign up section styles start */
+
+.sign-up {
+    height: 425px;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up .container-3 {
+    flex: 1 1 auto;
+    width: 100%;
+    background-color: #3882F6;
+    height: 183px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 232px;
+    border-radius: 10px;
+}
+
+.sign-up .title {
+    color: #E5E7EB;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.sign-up .subtext {
+    color: #E5E7EB;
+    opacity: .8;
+    font-size: 20px;
+}
+
+.sign-up button {
+    color: white;
+    background-color: #3882F6;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8px 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: color .2s;
+    transition: background-color .2s;
+}
+
+.sign-up button:hover {
+    color: #3882F6;
+    background-color: white;
+}
+
+/* Sign up section styles end
+  
+   Footer starts */
+
+.footer {
+    background-color: #1F2937;
+    height: 100px;
+}
+
+.footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    color: white;
+    font-size: 17px;
+    opacity: .9;
 }
