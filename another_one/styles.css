@@ -20,8 +20,12 @@ h1 {
     color: #F9FAF8;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
-    max-width: 1400px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -48,4 +52,46 @@ h1 {
     color: #F9FAF8;
     text-decoration: none;
     opacity: .7;
+}
+
+.header {
+    background-color: #1F2937;
+    height: 500px;
+}
+
+.header .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    max-width: 400px;
+    font-size: 48px;
+    font-weight: extra-bold;
+    color: #F9FAF8;
+    line-height: 50px;
+}
+
+.header p {
+    max-width: 450px;
+    font-size: 18px;
+    color: #F9FAF8;
+    opacity: .7;
+}
+
+.header img {
+    max-width: 700px;
+}
+
+.header button {
+    margin-top: 10px;
+    border: none;
+    padding: 9px 33px;
+    background-color: #3882F6;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
 }
