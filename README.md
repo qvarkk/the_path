@@ -1,4 +1,4 @@
-<h2 align="center">The place where I'll keep all my projects while learning web-development from zero.</h2>
+<h2 align="center">The place where I'll store all my projects while learning web-development from zero.</h2>
 <br>
 
 
