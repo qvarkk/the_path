@@ -1,3 +1,7 @@
-# the_path
+<h2 align="center">The place where I'll keep all my projects while learning web-development from zero.</h2>
+<br>
 
-The place where I'll keep all my projects while learning web-development from zero.
+
+<div align="center">
+  <img src="https://c.tenor.com/Nv3oWnQyAaEAAAAd/seulisasoo-monkey.gif" alt="...">
+</div>
