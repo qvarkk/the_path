@@ -94,7 +94,7 @@ const selectScissors = () => {
     } else if (playRound('scissors', computerPlay()) === 'lose') {
         compScore += 1;
     }
-    paraScore.innerHTML = `Score now is ${playerScore}:${compScore}`;
+    paraScore.innerHTML = `${playerScore}:${compScore}`;
     endGame();
 };
 
