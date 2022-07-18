@@ -80,8 +80,13 @@ button {
     color: #05386B;
 }
 
-.smol {
+.smol,
+.smol-2 {
     font-size: 15px;
+}
+
+.smol-2 {
+    margin-left: -12px;
 }
 
 /* Header */
@@ -229,13 +234,36 @@ button {
     border-radius: 22px;
     background-color: #edf5e1;
     border: 3px solid #05386B;
+    transition: transform .2s, box-shadow .2s ;
+}
+
+.rock-robot.pressed {
+    transform: translateY(-7px);
+    transform: translateX(-2px);
+    box-shadow: 4px 4px 3px #05386B;
 }
 
 .rock:hover,
 .paper:hover,
-.scissors:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 3px #05386B;
+.scissors:hover,
+.rock-robot:hover,
+.paper-robot:hover,
+.scissors-robot:hover {
+    transform: translateY(-7px);
+    transform: translateX(-2px);
+    box-shadow: 4px 4px 3px #05386B;
+}
+
+.rock:active,
+.paper:active,
+.scissors:active,
+.rock-robot:active,
+.paper-robot:active,
+.scissors-robot:active {
+    filter: contrast(86%); 
+    transform: translateY(0px);
+    transform: translateX(0px);
+    box-shadow: 0 0 4px #05386B;
 }
 
 .rock,
