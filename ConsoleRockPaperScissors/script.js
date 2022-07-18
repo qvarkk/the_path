@@ -76,7 +76,7 @@ const selectRock = () => {
     } else if (playRound('rock', computerPlay()) === 'lose') {
         compScore += 1;
     }
-    paraScore.innerHTML = `Score now is ${playerScore}:${compScore}`;
+    paraScore.innerHTML = `${playerScore}:${compScore}`;
     endGame();
 };
 const selectPaper = () => {
@@ -85,7 +85,7 @@ const selectPaper = () => {
     } else if (playRound('paper', computerPlay()) === 'lose') {
         compScore += 1;
     }
-    paraScore.innerHTML = `Score now is ${playerScore}:${compScore}`;
+    paraScore.innerHTML =`${playerScore}:${compScore}`;
     endGame();
 };
 const selectScissors = () => {
