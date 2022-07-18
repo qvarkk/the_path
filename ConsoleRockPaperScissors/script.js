@@ -1,4 +1,12 @@
-console.log(nickName_2);
+let nickname = localStorage.getItem('nickname');
+let playerName = document.querySelector('.name');
+let rockPlayerButton = document.querySelector('.rock');
+let paperPlayerButton = document.querySelector('.paper');
+let scissorsPlayerButton = document.querySelector('.scissors');
+let rockBotButton = document.querySelector('.rock-robot');
+let paperBotButton = document.querySelector('.paper-robot');
+let scissorsBotButton = document.querySelector('.scissors-robot');
+
 // "Computer" makes play 😵‍💫
 const results = ['rock', 'paper', 'scissors']; // Elements for "computer" to loop through 🤯
 function computerPlay() {
