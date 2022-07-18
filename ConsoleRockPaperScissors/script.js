@@ -4,6 +4,7 @@ const paraResult = document.querySelector('.show_result');
 const paraGameResult = document.querySelector('.game_result');
 
 paraResult.innerHTML = 'Press a button to choose an element and start a game!'
+paraScore.innerHTML = `Start a game to display the score!`;
 
 // "Computer" makes play 😵‍💫
 function computerPlay() {
@@ -49,46 +50,25 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-// 
-// // Loops for 1000 times (basically plays 1000 games) and breaks if one side wins 🥳
-// for (let i = 0; i < 1000; i++) {
-//     let playerSelection;
-//     // If user closes the prompt instead of throwing an error it will break out of game loop 😉
-//     try {
-//         playerSelection = prompt('Enter rock, paper or scissors').toString().toLowerCase();
-//     }
-//     catch (TypeError) {
-//         console.log('Refresh the page if you want to play again');
-//         break;
-//     }
-
-//     let result = playRound(playerSelection, computerPlay());
-//     if (result === 'win') {
-//         playerScore++;
-//         console.log(`Now the score is ${playerScore}:${compScore}`);
-//     } else if (result === 'loss') {
-//         compScore++;
-//         console.log(`Now the score is ${playerScore}:${compScore}`)
-//     } else if (result === 'input error') {
-//         console.log('Input error: try again!')
-//     } else {
-//         console.log(`Score remains the same ${playerScore}:${compScore}`)
-//     }
-
-//     if (playerScore === 5) {
-//         console.log("You've won! Refresh the page to play again")
-//         break;
-//     } else if (compScore === 5) {
-//         console.log("You've lost! Refresh the page to play again")
-//         break;
-//     }
-// }
-
 const btn_rock = document.querySelector('.rock');
 const btn_paper = document.querySelector('.paper');
 const btn_scissors = document.querySelector('.scissors');
 let playerScore = 0;
 let compScore = 0;
+
+const endGame = () => {
+    if (playerScore === 5) {
+        paraGameResult.innerHTML = `You've won the game! Press a button to start again`;
+        playerScore = 0;
+        compScore = 0;
+    } else if (compScore === 5) {
+        paraGameResult.innerHTML = `You've lost the game!`;
+        playerScore = 0;
+        compScore = 0;
+    } else {
+        paraGameResult.innerHTML = ``;
+    }
+};
 
 const selectRock = () => {
     if (playRound('rock', computerPlay()) === 'win') {
@@ -96,12 +76,26 @@ const selectRock = () => {
     } else if (playRound('rock', computerPlay()) === 'lose') {
         compScore += 1;
     }
+    paraScore.innerHTML = `Score now is ${playerScore}:${compScore}`;
+    endGame();
 };
 const selectPaper = () => {
-    playRound('paper', computerPlay());
+    if (playRound('paper', computerPlay()) === 'win') {
+        playerScore += 1;
+    } else if (playRound('paper', computerPlay()) === 'lose') {
+        compScore += 1;
+    }
+    paraScore.innerHTML = `Score now is ${playerScore}:${compScore}`;
+    endGame();
 };
 const selectScissors = () => {
-    playRound('scissors', computerPlay());
+    if (playRound('scissors', computerPlay()) === 'win') {
+        playerScore += 1;
+    } else if (playRound('scissors', computerPlay()) === 'lose') {
+        compScore += 1;
+    }
+    paraScore.innerHTML = `Score now is ${playerScore}:${compScore}`;
+    endGame();
 };
 
 btn_rock.addEventListener('click', selectRock);
