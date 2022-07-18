@@ -1,6 +1,6 @@
-const results = ['rock', 'paper', 'scissors']; // Elements for "computer" to loop through 🤯
-
+console.log(nickName_2);
 // "Computer" makes play 😵‍💫
+const results = ['rock', 'paper', 'scissors']; // Elements for "computer" to loop through 🤯
 function computerPlay() {
     const randomResult = Math.floor(Math.random() * results.length);
     return results[randomResult];
@@ -10,35 +10,35 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === 'rock'){
         if (playerSelection === 'rock') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">It's a tie</span>`;
+            paraResult.innerHTML = ``;
             return 'tie';
         } else if (playerSelection === 'paper') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">You've won</span>`;
+            paraResult.innerHTML = ``;
             return 'win';
         } else if (playerSelection === 'scissors') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">You've lost</span>`;
+            paraResult.innerHTML = ``;
             return 'lose';
         }
     } else if (computerSelection === 'paper') {
         if (playerSelection === 'rock') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">You've lost</span>`;
+            paraResult.innerHTML = ``;
             return 'lose';
         } else if (playerSelection === 'paper') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">It's a tie</span>`;
+            paraResult.innerHTML = ``;
             return 'tie';
         } else if (playerSelection === 'scissors') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">You've won</span>`;
+            paraResult.innerHTML = ``;
             return 'win';
         }
     } else if (computerSelection === 'scissors') {
         if (playerSelection === 'rock') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">You've won</span>`;
+            paraResult.innerHTML = ``;
             return 'win';
         } else if (playerSelection === 'paper') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">You've lost</span>`;
+            paraResult.innerHTML = ``;
             return 'lose';
         } else if (playerSelection === 'scissors') {
-            paraResult.innerHTML = `You've chosen <br><span class="selection">${playerSelection}</span><br> Computer choise was <br><span class="selection">${computerSelection}</span><br> <span class="res">It's a tie</span>`;
+            paraResult.innerHTML = ``;
             return 'tie';
         }
     }
