@@ -1,4 +1,4 @@
-const paraResult = document.querySelector('.moves-log');
+// ICANT
 
 const results = ['rock', 'paper', 'scissors']; // Elements for "computer" to loop through 🤯
 // "Computer" makes play 😵‍💫
@@ -7,39 +7,42 @@ function computerPlay() {
     return results[randomResult];
 }
 
+const paraResult = document.querySelector('.moves-log');
+
+
 // Goes through all possible game results 🤓
 function playRound(playerSelection, computerSelection) {
     if (computerSelection === 'rock'){
         if (playerSelection === 'rock') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>You've chosen ${playerSelection}, but robot decided on ${computerSelection} as well. It's a tie`;
             return 'tie';
         } else if (playerSelection === 'paper') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>Robot selected ${computerSelection}. Good for you, you've beaten it with ${playerSelection}`;
             return 'win';
         } else if (playerSelection === 'scissors') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>Robot have beaten your ${playerSelection} with its ${computerSelection}`;
             return 'lose';
         }
     } else if (computerSelection === 'paper') {
         if (playerSelection === 'rock') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>Robot have beaten your ${playerSelection} with its ${computerSelection}`;
             return 'lose';
         } else if (playerSelection === 'paper') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>You've chosen ${playerSelection}, but robot decided on ${computerSelection} as well. It's a tie`;
             return 'tie';
         } else if (playerSelection === 'scissors') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>Robot selected ${computerSelection}. Good for you, you've beaten it with ${playerSelection}`;
             return 'win';
         }
     } else if (computerSelection === 'scissors') {
         if (playerSelection === 'rock') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>Robot selected ${computerSelection}. Good for you, you've beaten it with ${playerSelection}`;
             return 'win';
         } else if (playerSelection === 'paper') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>Robot have beaten your ${playerSelection} with its ${computerSelection}`;
             return 'lose';
         } else if (playerSelection === 'scissors') {
-            paraResult.innerHTML += `<br>${computerSelection}:${playerSelection}`;
+            paraResult.innerHTML += `<br>You've chosen ${playerSelection}, but robot decided on ${computerSelection} as well. It's a tie`;
             return 'tie';
         }
     }
@@ -76,22 +79,41 @@ const changeCompButton = (computerSelection) => {
     }
 };
 
+const healthText = document.querySelector('.health-count');
+const roboHealthText = document.querySelector('.robo-health-status1');
+
+let humanHealth = '5';
+let compHealth = '5';
+let roundCount = 0;
+
 let computerSelection;
+let roundResult;
+
+console.log(healthText, roboHealthText);
+
 rockPlayerButton.addEventListener('click', () => {
     computerSelection = computerPlay();
-    console.log(computerSelection);
     changeCompButton(computerSelection);
-    playRound('rock', computerSelection);
+    roundResult = playRound('rock', computerSelection);
+     if (roundResult === 'win') {
+        compHealth = toString(parseInt(compHealth) - 1);
+        roboHealthText.innerHTML = compHealth;
+        roundCount++;
+     } else if (roundResult === 'lose') {
+        humanHealth = toString(parseInt(humanHealth) - 1);
+        healthText.innerHTML = humanHealth;
+        roundCount++;
+     } else {
+        roundCount++;
+     }
 });
 paperPlayerButton.addEventListener('click', () => {
     computerSelection = computerPlay();
-    console.log(computerSelection);
     changeCompButton(computerSelection);
     playRound('paper', computerSelection);
 });
 scissorsPlayerButton.addEventListener('click', () => {
     computerSelection = computerPlay();
-    console.log(computerSelection);
     changeCompButton(computerSelection);
     playRound('scissors', computerSelection);
 });
