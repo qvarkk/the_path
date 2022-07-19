@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <style>
+        body {
+            background-color: #5CDB95;
+        }
+        .prompt {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #nickname {
+            font-size: 25px;
+            border: none;
+            width: 200px;
+            height: 48px;
+            padding: 7px;
+            border-radius: 20px 0 0 20px;
+        }
+        .continue {
+            height: 62px;
+            width: 120px;
+            border: none;
+            font-size: 25px;
+            font-weight: 700;
+            border-radius: 0 20px 20px 0;
+        }
+        .continue:active {
+            background-color: #ffffffa4;
+        }
+    </style>
+    <script defer src="get_name.js"></script>
+</head>
+<body>
+    <div class="prompt">
+        <form action="index.html">
+            <input type="text" name="" id="nickname" autofocus minlength="1" maxlength="5" placeholder="Enter your name">
+            <button id="redir" class="continue">START</button>
+        </form>
+    </div>
+</body>
+</html>
